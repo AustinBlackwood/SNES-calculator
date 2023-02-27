@@ -1,0 +1,60 @@
+@font-face {
+    font-family: snes;
+    src: url(/fonts/SNES\ Italic.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: snes, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    /*background-image: url("images/tabletop.jpg");*/
+    background-color: rgb(105, 106, 184);
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.header__nav{
+    width: 150px;
+    height: 75px;
+    background-color: #b5b6e4;
+    text-align: center;
+    padding-top: 23px;
+    border-radius: 0px 0px 10px 10px;
+    border: 5px solid black;
+    transform: translateY(-65px);
+    transition: 0.5s;
+}
+
+.header__nav:hover{
+    transform: translateY(-10px);
+}
+
+.header__nav__a{
+    font-size: 20pt;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.calculator{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 95%;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 5/9;
+    max-width: 500px;
+    max-height: 90%;
+    background-color: aliceblue;
+    border: 3px solid rgb(0, 0, 0);
+}
+
+
