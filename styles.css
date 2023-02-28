@@ -1,12 +1,12 @@
 @font-face {
-  font-family: snes;
-  src: url(/fonts/SNES\ Italic.ttf);
+  font-family: "snes";
+  src: url(fonts/snes.ttf);
 }
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: snes, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "snes";
 }
 
 body {
@@ -34,6 +34,7 @@ body {
 
 .header__nav:hover {
   transform: translateY(-10px);
+  cursor: pointer;
 }
 
 .header__nav__a {
@@ -43,15 +44,84 @@ body {
 }
 
 .calculator {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   width: 95%;
   transform: translate(-50%, -50%);
-  aspect-ratio: 5/9;
+  aspect-ratio: 3/5;
   max-width: 500px;
   max-height: 90%;
-  background-color: aliceblue;
-  border: 3px solid rgb(0, 0, 0);
+  background-color: #b2b4b2;
+  border: 7px solid #54585a;
+  box-shadow: 0px 5px 10px rgb(31, 31, 31);
+  border-radius: 5px;
+}
+
+.calculator__upper {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  background-color: #54585a;
+  margin: 3%;
+  border: black solid 3px;
+  border-radius: 5px;
+}
+
+.calculator__upper__container {
+  display: flex;
+  flex-direction: row;
+  height: 50%;
+}
+
+.calculator__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 60%;
+  margin: 1%;
+  background-color: black;
+  color: rgb(222, 21, 21);
+  font-size: calc(0.7em + 1vw);
+  border-radius: 5px;
+}
+
+.calculator__solar {
+  width: 45%;
+  height: 40%;
+  margin: 1%;
+  margin-top: 3%;
+  background-color: rgb(115, 100, 59);
+  border: black solid 1px;
+  background-image: url(images/Vertical-Line.png);
+  background-size: 10%;
+  background-position: 0%;
+}
+
+.calculator__screen {
+  width: 96%;
+  height: 40%;
+  background-color: #a7a4e0;
+  text-align: right;
+  padding-right: 5%;
+  padding-top: 2%;
+  font-size: calc(40px + 6 * (100vw - 320px) / 680);
+  letter-spacing: calc(10px + 6 * (100vw - 320px) / 680);
+  align-self: center;
+  margin: 1%;
+  margin-bottom: 5%;
+  margin-top: 0;
+}
+
+.calculator__lower {
+  display: flex;
+  flex: 6;
+  background-color: #54585a;
+  margin: 4%;
+  border: black solid 3px;
+  border-radius: 5px;
 }/*# sourceMappingURL=styles.css.map */
