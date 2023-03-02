@@ -9,8 +9,6 @@ $snes-light-grey: 	#b2b4b2;
 $snes-dark-grey: 	#54585a;
 
 *{
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
     font-family: "snes";
 }
@@ -64,6 +62,7 @@ body{
     transform: translate(-50%, -50%);
     aspect-ratio: 3/5;
     max-width: 500px;
+    min-height: 600px;
     max-height: 90%;
     background-color: $snes-light-grey;
     border: 7px solid $snes-dark-grey;
@@ -79,6 +78,7 @@ body{
     margin: 3%;
     border: black solid 3px;
     border-radius: 5px;
+    max-height: 200px;
 }
 
 .calculator__upper__container{
@@ -120,8 +120,6 @@ body{
     color: rgb(43, 43, 43);
     background-color: $snes-light-purple;
     padding-right: 1%;
-    font-size: calc(40px + 6 * ((100vw - 320px) / 680));
-    letter-spacing: calc(10px + 6 * ((100vw - 320px) / 680));
     align-self: center;
     box-shadow: inset 0px 2px 7px 2px rgba(0, 0, 0, 0.562);
     border: 10px black solid;
@@ -181,7 +179,6 @@ body{
     height: calc(3rem + 6 * ((100vw - 320px) / 680));
     border-radius: 500px;
     background-color: rgb(41, 41, 41);
-    
 }
 
 #decimal{
@@ -221,30 +218,123 @@ body{
 
 @media screen and (max-width: 269px) {
 
+    .calculator__logo{
+        font-size: 8pt;
+    }
+
 
     .calculator__screen{
         font-size: 16pt;
         letter-spacing: 5px;
         overflow: hidden;
     }
+
+    .calculator__button{
+        width:calc(3rem + 6 * ((100vw - 320px) / 680));
+        height:calc(3rem + 6 * ((100vw - 320px) / 680));
+        font-size: large;
+    }
+    #equals{
+        height:calc(3rem + 6 * ((100vw - 320px) / 680));
+    }
 }
 
 @media screen and (min-width: 270px) and (max-width: 299px) {
+
+    .calculator__logo{
+        font-size: calc(15px + 6 * ((100vw - 320px) / 680));
+    }
+
     .calculator__screen{
         font-size: calc(30px + 6 * ((100vw - 320px) / 680));
         letter-spacing: calc(10px + 6 * ((100vw - 320px) / 680));
     }
+
+    .calculator__button{
+        width:calc(3rem + 6 * ((100vw - 320px) / 680));
+        height:calc(3rem + 6 * ((100vw - 320px) / 680));
+        font-size: large;
+    }
+    #equals{
+        height:calc(3rem + 6 * ((100vw - 320px) / 680));
+    }
+
 }
 
 @media screen and (min-width: 300px) and (max-width: 399px) {
+    .calculator__logo{
+        font-size: calc(17px + 6 * ((100vw - 320px) / 680));
+    }
+
     .calculator__screen{
         font-size: calc(40px + 6 * ((100vw - 320px) / 680));
         letter-spacing: calc(10px + 6 * ((100vw - 320px) / 680));
     }
+
+    .calculator__button{
+        width:calc(3.5rem + 6 * ((100vw - 320px) / 680));
+        height:calc(3.5rem + 6 * ((100vw - 320px) / 680));
+        font-size: large;
+    }
+    #equals{
+        height:calc(3.5rem + 6 * ((100vw - 320px) / 680));
+    }
 }
 
-@media screen and (min-width: 400px) and (max-width: 499px) {
+@media screen and (min-width: 400px) and (max-width: 549px) {
+    .calculator__logo{
+        font-size: calc(20px + 6 * ((100vw - 320px) / 680));
+    }
+    .calculator__screen{
+        font-size: calc(60px + 6 * ((100vw - 320px) / 680));
+        letter-spacing: calc(10px + 6 * ((100vw - 320px) / 680));
+    }
+    .calculator__button{
+        width:calc(4rem + 6 * ((100vw - 320px) / 680));
+        height:calc(4rem + 6 * ((100vw - 320px) / 680));
+        font-size: large;
+    }
+    #equals{
+        height:calc(4rem + 6 * ((100vw - 320px) / 680));
+    }
+}
+
+@media screen and (min-width: 550px) and (max-width: 699px) {
+    .calculator__logo{
+        font-size: calc(25px + 6 * ((100vw - 320px) / 680));
+    }
     .calculator__screen{
         font-size: 50pt;
+        letter-spacing: 20px;
     }
+
+    .calculator__button{
+        width:80px;
+        height:80px;
+        font-size: x-large;
+    }
+    #equals{
+        height:80px;
+    }
+}
+
+@media screen and (min-width: 700px){
+    .calculator__logo{
+        font-size: 20pt;
+    }
+    .calculator__screen{
+        font-size: 50pt;
+        letter-spacing: 20px;
+    }
+
+    .calculator__button{
+        width:80px;
+        height:80px;
+        font-size: xx-large;
+    }
+
+    #equals{
+        height:80px;
+    }
+    
 }
